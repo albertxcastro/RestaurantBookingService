@@ -4,7 +4,7 @@
 
 CREATE TABLE "Location"."Location"
 (
-    "Id" bigint NOT NULL,
+    "Id" bigserial NOT NULL,
     "Longitude" double precision NOT NULL,
     "Latitude" double precision NOT NULL,
     CONSTRAINT "Location_pkey" PRIMARY KEY ("Id")

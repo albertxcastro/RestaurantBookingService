@@ -4,7 +4,7 @@
 
 CREATE TABLE "Entities"."DietaryRestriction"
 (
-    "Id" bigint NOT NULL,
+    "Id" bigserial NOT NULL,
     "Name" character varying(20) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "DietaryRestriction_pkey" PRIMARY KEY ("Id")
 )

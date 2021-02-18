@@ -4,7 +4,7 @@
 
 CREATE TABLE "Entities"."Restaurant"
 (
-    "Id" double precision NOT NULL,
+    "Id" bigserial NOT NULL,
     "Name" character varying(100) COLLATE pg_catalog."default" NOT NULL,
     "LocationId" bigint,
     CONSTRAINT "Id" PRIMARY KEY ("Id"),

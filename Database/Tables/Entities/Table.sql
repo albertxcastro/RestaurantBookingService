@@ -4,7 +4,7 @@
 
 CREATE TABLE "Entities"."Table"
 (
-    "Id" bigint NOT NULL,
+    "Id" bigserial NOT NULL,
     "Capacity" integer NOT NULL,
     "RestaurantId" bigint NOT NULL,
     CONSTRAINT pkey PRIMARY KEY ("Id"),

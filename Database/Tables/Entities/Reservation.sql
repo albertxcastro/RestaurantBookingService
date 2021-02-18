@@ -4,7 +4,7 @@
 
 CREATE TABLE "Entities"."Reservation"
 (
-    "Id" bigint NOT NULL,
+    "Id" bigserial NOT NULL,
     "DateTime" timestamp with time zone,
     "MarkForDelete" boolean NOT NULL,
     "TableId" bigint NOT NULL,

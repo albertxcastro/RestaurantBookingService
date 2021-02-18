@@ -4,7 +4,7 @@
 
 CREATE TABLE "Security"."Users"
 (
-    "Id" bigint NOT NULL,
+    "Id" bigserial NOT NULL,
     "Name" character varying(50) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "Users_pkey" PRIMARY KEY ("Id")
 )
