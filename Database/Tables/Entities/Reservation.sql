@@ -1,8 +1,8 @@
--- Table: Entities.Reservation
+-- Table: entities.reservation
 
--- DROP TABLE "Entities"."Reservation";
+-- DROP TABLE entities.reservation
 
-CREATE TABLE "Entities"."Reservation"
+CREATE TABLE entities.reservation
 (
     "Id" bigserial NOT NULL,
     "DateTime" timestamp with time zone,
@@ -11,11 +11,11 @@ CREATE TABLE "Entities"."Reservation"
     "RestaurantId" bigint NOT NULL,
     CONSTRAINT "Reservation_pkey" PRIMARY KEY ("Id"),
     CONSTRAINT "RestaurantId" FOREIGN KEY ("RestaurantId")
-        REFERENCES "Entities"."Restaurant" ("Id") MATCH SIMPLE
+        REFERENCES entities.restaurant ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
     CONSTRAINT table_fk FOREIGN KEY ("TableId")
-        REFERENCES "Entities"."Table" ("Id") MATCH SIMPLE
+        REFERENCES entities.table ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
         NOT VALID
@@ -25,13 +25,13 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "Entities"."Reservation"
+ALTER TABLE entities.reservation
     OWNER to postgres;
 -- Index: fki_table_fkey
 
 -- DROP INDEX "Entities".fki_table_fkey;
 
 CREATE INDEX fki_table_fkey
-    ON "Entities"."Reservation" USING btree
+    ON entities.reservation USING btree
     ("TableId" ASC NULLS LAST)
     TABLESPACE pg_default;

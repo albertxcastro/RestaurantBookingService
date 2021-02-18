@@ -1,17 +1,17 @@
--- Table: Entities.ReservationToUser
+-- Table: entities.reservation_to_user
 
--- DROP TABLE "Entities"."ReservationToUser";
+-- DROP TABLE entities.reservationToUser;
 
-CREATE TABLE "Entities"."ReservationToUser"
+CREATE TABLE entities.reservation_to_user
 (
     "ReservationId" bigint,
     "UserId" bigint,
     CONSTRAINT "Reservation_pk" FOREIGN KEY ("ReservationId")
-        REFERENCES "Entities"."Reservation" ("Id") MATCH SIMPLE
+        REFERENCES entities.reservation ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
     CONSTRAINT "User_pk" FOREIGN KEY ("ReservationId")
-        REFERENCES "Security"."Users" ("Id") MATCH SIMPLE
+        REFERENCES security.users ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
@@ -20,5 +20,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "Entities"."ReservationToUser"
+ALTER TABLE entities.reservation_to_user
     OWNER to postgres;

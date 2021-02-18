@@ -1,19 +1,19 @@
--- Table: Entities.Diner
+-- Table: entities.diner
 
--- DROP TABLE "Entities"."Diner";
+-- DROP TABLE entities.diner
 
-CREATE TABLE "Entities"."Diner"
+CREATE TABLE entities.diner
 (
     "Id" bigserial NOT NULL,
     "UserID" bigint,
     "RestaurantId" bigint,
     CONSTRAINT "Diner_pkey" PRIMARY KEY ("Id"),
     CONSTRAINT "RestaurantId" FOREIGN KEY ("RestaurantId")
-        REFERENCES "Entities"."Restaurant" ("Id") MATCH SIMPLE
+        REFERENCES entities.restaurant ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
     CONSTRAINT "UserId" FOREIGN KEY ("UserID")
-        REFERENCES "Security"."Users" ("Id") MATCH SIMPLE
+        REFERENCES security.users ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
@@ -22,5 +22,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "Entities"."Diner"
+ALTER TABLE entities.diner
     OWNER to postgres;

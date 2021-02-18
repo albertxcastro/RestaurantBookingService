@@ -1,8 +1,8 @@
--- Table: Entities.DietaryRestriction
+-- Table: entities.dietary_restriction
 
--- DROP TABLE "Entities"."DietaryRestriction";
+-- DROP TABLE entities.dietary_restriction
 
-CREATE TABLE "Entities"."DietaryRestriction"
+CREATE TABLE entities.dietary_restriction
 (
     "Id" bigserial NOT NULL,
     "Name" character varying(20) COLLATE pg_catalog."default" NOT NULL,
@@ -13,5 +13,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "Entities"."DietaryRestriction"
+ALTER TABLE entities.dietary_restriction
     OWNER to postgres;

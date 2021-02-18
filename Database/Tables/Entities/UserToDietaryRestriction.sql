@@ -1,17 +1,17 @@
--- Table: Entities.UserToDietaryRestriction
+-- Table: entities.user_to_dietary_restriction
 
--- DROP TABLE "Entities"."UserToDietaryRestriction";
+-- DROP TABLE entities.user_to_dietary_restriction;
 
-CREATE TABLE "Entities"."UserToDietaryRestriction"
+CREATE TABLE entities.user_to_dietary_restriction
 (
     "UserId" bigint,
     "DietaryRestrictionId" bigint,
     CONSTRAINT "DietaryRestrictionId_fk" FOREIGN KEY ("DietaryRestrictionId")
-        REFERENCES "Entities"."DietaryRestriction" ("Id") MATCH SIMPLE
+        REFERENCES entities.dietary_restriction ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
     CONSTRAINT "UserId_fk" FOREIGN KEY ("UserId")
-        REFERENCES "Security"."Users" ("Id") MATCH SIMPLE
+        REFERENCES security.users ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
@@ -20,5 +20,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "Entities"."UserToDietaryRestriction"
+ALTER TABLE entities.user_to_dietary_restriction
     OWNER to postgres;

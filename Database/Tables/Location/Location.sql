@@ -1,8 +1,8 @@
--- Table: Location.Location
+-- Table: location.location
 
--- DROP TABLE "Location"."Location";
+-- DROP TABLE location.location;
 
-CREATE TABLE "Location"."Location"
+CREATE TABLE location.location
 (
     "Id" bigserial NOT NULL,
     "Longitude" double precision NOT NULL,
@@ -14,5 +14,5 @@ WITH (
 )
 TABLESPACE pg_default;
 
-ALTER TABLE "Location"."Location"
+ALTER TABLE location.location
     OWNER to postgres;

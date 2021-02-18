@@ -1,6 +1,6 @@
--- SCHEMA: Location
+-- SCHEMA: location
 
--- DROP SCHEMA "Location" ;
+-- DROP SCHEMA Location;
 
-CREATE SCHEMA "Location"
+CREATE SCHEMA location
     AUTHORIZATION postgres;

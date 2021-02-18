@@ -1,6 +1,6 @@
--- SCHEMA: Security
+-- SCHEMA: security
 
--- DROP SCHEMA "Security" ;
+-- DROP SCHEMA security ;
 
-CREATE SCHEMA "Security"
+CREATE SCHEMA security
     AUTHORIZATION postgres;

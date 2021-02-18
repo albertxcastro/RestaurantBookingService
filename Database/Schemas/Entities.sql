@@ -1,6 +1,6 @@
--- SCHEMA: Entities
+-- SCHEMA: entities
 
--- DROP SCHEMA "Entities" ;
+-- DROP SCHEMA "entities" ;
 
-CREATE SCHEMA "Entities"
+CREATE SCHEMA entities
     AUTHORIZATION postgres;
