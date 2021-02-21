@@ -4,13 +4,13 @@
 
 CREATE TABLE entities.user_to_dietary_restriction
 (
-    "UserId" bigint,
-    "DietaryRestrictionId" bigint,
-    CONSTRAINT "DietaryRestrictionId_fk" FOREIGN KEY ("DietaryRestrictionId")
+    user_id bigint,
+    dietary_restriction_id bigint,
+    CONSTRAINT "DietaryRestrictionId_fk" FOREIGN KEY ("dietary_restriction_id")
         REFERENCES entities.dietary_restriction ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
-    CONSTRAINT "UserId_fk" FOREIGN KEY ("UserId")
+    CONSTRAINT "UserId_fk" FOREIGN KEY ("user_id")
         REFERENCES security.users ("Id") MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
