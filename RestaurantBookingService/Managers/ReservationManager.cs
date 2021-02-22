@@ -62,7 +62,7 @@ namespace RestaurantBookingService.Managers
                 }
             }
 
-            return string.Format("Reservation at restaurant {0} at {1} was successfully booked. Your reservation id is {3}, if you want to cancel, you'll need it :)", reservation.RestaurantId, reservation.DateTime, reservation.Id);
+            return string.Format("Reservation at restaurant {0} at {1} was successfully booked. Your reservation id is {2}, if you want to cancel, you'll need it :)", reservation.RestaurantId, reservation.DateTime, reservation.Id);
         }
 
         public async Task<string> DeleteReservationAsync(long reservationId, CancellationToken cancellationToken)
