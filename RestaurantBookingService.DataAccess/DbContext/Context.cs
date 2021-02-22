@@ -123,16 +123,6 @@ namespace RestaurantBookingService.DataAccess.Context
                 entity.Property(e => e.RestaurantId).HasColumnName("restaurant_id");
 
                 entity.Property(e => e.UserId).HasColumnName("user_id");
-
-                //entity.HasOne(d => d.Restaurant)
-                //    .WithMany(p => p.Diners)
-                //    .HasForeignKey(d => d.RestaurantId)
-                //    .HasConstraintName("RestaurantId");
-
-                //entity.HasOne(d => d.User)
-                //    .WithMany(p => p.Diners)
-                //    .HasForeignKey(d => d.UserId)
-                //    .HasConstraintName("UserId");
             });
 
             modelBuilder.Entity<Location>(entity =>
@@ -167,18 +157,6 @@ namespace RestaurantBookingService.DataAccess.Context
                 entity.Property(e => e.RestaurantId).HasColumnName("restaurant_id");
 
                 entity.Property(e => e.TableId).HasColumnName("table_id");
-
-                //entity.HasOne(d => d.Restaurant)
-                //    .WithMany(p => p.Reservations)
-                //    .HasForeignKey(d => d.RestaurantId)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("RestaurantId");
-
-                //entity.HasOne(d => d.Table)
-                //    .WithMany(p => p.Reservations)
-                //    .HasForeignKey(d => d.TableId)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("table_fk");
             });
 
             modelBuilder.Entity<ReservationToUser>(entity =>
@@ -190,16 +168,6 @@ namespace RestaurantBookingService.DataAccess.Context
                 entity.Property(e => e.ReservationId).HasColumnName("reservation_id");
 
                 entity.Property(e => e.UserId).HasColumnName("user_id");
-
-                //entity.HasOne(d => d.Reservation)
-                //    .WithMany()
-                //    .HasForeignKey(d => d.ReservationId)
-                //    .HasConstraintName("Reservation_pk");
-
-                //entity.HasOne(d => d.ReservationNavigation)
-                //    .WithMany()
-                //    .HasForeignKey(d => d.ReservationId)
-                //    .HasConstraintName("User_pk");
             });
 
             modelBuilder.Entity<Restaurant>(entity =>
@@ -208,7 +176,6 @@ namespace RestaurantBookingService.DataAccess.Context
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id");
-                    //.HasDefaultValueSql("nextval('entities.\"restaurant_Id_seq\"'::regclass)");
 
                 entity.Property(e => e.LocationId).HasColumnName("location_id");
 
@@ -216,11 +183,6 @@ namespace RestaurantBookingService.DataAccess.Context
                     
                     .HasMaxLength(100)
                     .HasColumnName("name");
-
-                //entity.HasOne(d => d.Location)
-                //    .WithMany(p => p.Restaurants)
-                //    .HasForeignKey(d => d.LocationId)
-                //    .HasConstraintName("LocationId");
             });
 
             modelBuilder.Entity<RestaurantToDietaryRestriction>(entity =>
@@ -232,18 +194,6 @@ namespace RestaurantBookingService.DataAccess.Context
                 entity.Property(e => e.DietaryRestrictionId).HasColumnName("dietary_restriction_id");
 
                 entity.Property(e => e.RestaurantId).HasColumnName("restaurant_id");
-
-                //entity.HasOne(d => d.DietaryRestriction)
-                //    .WithMany()
-                //    .HasForeignKey(d => d.DietaryRestrictionId)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("dietary_rest_fkey");
-
-                //entity.HasOne(d => d.Restaurant)
-                //    .WithMany()
-                //    .HasForeignKey(d => d.RestaurantId)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("rest_fkey");
             });
 
             modelBuilder.Entity<Table>(entity =>
@@ -257,12 +207,6 @@ namespace RestaurantBookingService.DataAccess.Context
                 entity.Property(e => e.Capacity).HasColumnName("capacity");
 
                 entity.Property(e => e.RestaurantId).HasColumnName("restaurant_id");
-
-                //entity.HasOne(d => d.Restaurant)
-                //    .WithMany(p => p.Tables)
-                //    .HasForeignKey(d => d.RestaurantId)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("RestaurantId");
             });
 
             modelBuilder.Entity<User>(entity =>
@@ -281,11 +225,6 @@ namespace RestaurantBookingService.DataAccess.Context
                     .HasColumnName("name");
 
                 entity.Property(e => e.ReservationId).HasColumnName("reservation_id");
-
-                //entity.HasOne(d => d.Reservation)
-                //    .WithMany(p => p.Users)
-                //    .HasForeignKey(d => d.ReservationId)
-                //    .HasConstraintName("reservation_fkey");
             });
 
             modelBuilder.Entity<UserToDietaryRestriction>(entity =>
@@ -297,16 +236,6 @@ namespace RestaurantBookingService.DataAccess.Context
                 entity.Property(e => e.DietaryRestrictionId).HasColumnName("dietary_restriction_id");
 
                 entity.Property(e => e.UserId).HasColumnName("user_id");
-
-                //entity.HasOne(d => d.DietaryRestriction)
-                //    .WithMany()
-                //    .HasForeignKey(d => d.DietaryRestrictionId)
-                //    .HasConstraintName("DietaryRestrictionId_fk");
-
-                //entity.HasOne(d => d.User)
-                //    .WithMany()
-                //    .HasForeignKey(d => d.UserId)
-                //    .HasConstraintName("UserId_fk");
             });
 
             OnModelCreatingPartial(modelBuilder);
