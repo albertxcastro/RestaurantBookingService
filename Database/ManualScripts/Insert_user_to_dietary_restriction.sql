@@ -2,7 +2,7 @@ INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction
 INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction_id") VALUES (1, 4);--Jack is Gluten free
 
 INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction_id") VALUES (2, 1);--Albert is vegan
-INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction_id") VALUES (2, 4);--Albert is Diabetic
+INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction_id") VALUES (2, 7);--Albert is Diabetic
 
 INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction_id") VALUES (3, 3);--Tony is paleo
 INSERT INTO entities.user_to_dietary_restriction("user_id", "dietary_restriction_id") VALUES (3, 4);--Tony is Diabetic
